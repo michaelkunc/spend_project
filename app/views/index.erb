@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div class = 'location_container'>
+
+    <% @locations.each do |location| %>
+      <h1>
+        <a href="/locations/<%= location.id %>"><%= location.name %></a>
+      </h1>
+
+      <h2>$<%= Spend.total(location) %></h2>
+
+      <h3><%= location.city %></h3>
+
+    <% end %>
+
+  </div>
+
+
+
+</div>
