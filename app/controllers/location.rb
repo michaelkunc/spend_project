@@ -1,4 +1,5 @@
 get "/locations/:id" do
   @location = Location.find(params[:id])
-  erb :location
+  @loc_suppliers = @location
+  erb :location, layout: false
 end
