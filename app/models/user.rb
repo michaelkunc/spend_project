@@ -6,7 +6,7 @@ validates :username, {uniqueness: true, presence: true}
 
 
   def password
-    @password ||= BCrypt.new(hashed_password)
+    @password ||= BCrypt::Password.new(hashed_password)
   end
 
   def password=(entered_password)
