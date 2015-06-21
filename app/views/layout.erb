@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -18,6 +18,17 @@
   <title></title>
 </head>
 <body>
+  <div class="header">
+  <% if session[:user_id] %>
+    <%= erb :"shared/_logged-in-header" %>
+  <% else %>
+    <%= erb :"shared/_logged-out-header" %>
+  <% end %>
+
+
+
+  </div>
+
   <%= yield %>
 </body>
 </html>
