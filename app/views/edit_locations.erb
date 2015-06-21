@@ -1,0 +1,16 @@
+<div class="container">
+
+  <div class = 'edit_container'>
+    <h1>Select a location to edit</h1>
+    <% @locations.each do |location| %>
+      <h1>
+        <a href="/locations/<%= location.id %>/edit"><%= location.name %></a>
+      </h1>
+
+    <% end %>
+
+  </div>
+
+
+
+</div>
